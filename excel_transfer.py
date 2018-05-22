@@ -109,20 +109,5 @@ def read():
         import traceback
         print traceback.format_exc()
 
+
 read()
-
-
-wb = Workbook()
-
-ws = wb.active
-
-ws.cell(row=1, column=1).value = 6
-ws.cell("B1").value = 7
-
-for row in range(2, 11):
-    for col in range(1, 11):
-        ws.cell(row=row, column=col).value = get_column_letter(col)
-
-ws.append(["我", "你", "她"])
-
-wb.save(filename="/Users/budong/Desktop/a.xlsx")
