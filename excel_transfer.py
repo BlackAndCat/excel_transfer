@@ -69,7 +69,7 @@ def write_values(values, to_sheet):
             for cell in row:
                 if cell.value:
                     continue
-                idx = str(cell.col_idx)
+                idx = str(int(cell.col_idx)-1)
                 if len(idx) < 2:
                     idx = "0" + idx
                 v = vals.get(idx, None)
